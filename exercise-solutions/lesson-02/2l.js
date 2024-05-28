@@ -1,2 +1,2 @@
 //temp in F
-console.log((25*9/5)+32);
+console.log((25 * 9 /5) +32);
