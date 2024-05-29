@@ -1,29 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>HTML CSS Review</title>
     <style>
-      .add-to-cart-button {
-        background-color: yellow;
+      /*
+        This is a comment.
+      */
+      .red-button {
+        background-color: red;
+        color: white;
+        border: none;
       }
-    
-      .buy-now-button {
-        background-color: orange;
+
+      .yellow-button {
+        background-color: yellow;
       }
     </style>
   </head>
   <body>
-    <p>Adults Plain Cotton T-shirt</p>
-    <p>Price: $7.99</p>
+    <!--
+      This is a comment.
+    -->
+    <button title="Good job!" class="red-button" onclick="
+      alert('Good job!');
+    ">
+      hello
+    </button>
 
-    <!-- I added some extra spaces to make the code
-    easier to read. -->
-    <button class="add-to-cart-button" onclick="
-      alert('Added');
-    ">Add to cart</button>
+    <p>
+      paragraph of <button class="yellow-button">hello</button> text
+    </p>
 
-    <button class="buy-now-button" onclick="
-      alert('Loading...');
-      alert('Purchased');
-    ">Buy now</button>
+    <script>
+      // This is a comment.
+      // This code creates a popup.
+      // alert('hello');
+
+      /*
+        multi
+        line
+        comment
+      */
+
+      console.log(2 + 2);
+      console.log('some' + 'text');
+    </script>
   </body>
 </html>
