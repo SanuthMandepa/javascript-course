@@ -29,6 +29,19 @@
     console.log('Cart was reset')
     console.log(`Cart quantity: ${cartQuantity}`);
     ">Reset Cart</button>
+    
+    <button onclick="
+    cartQuantity --;
+    
+    console.log(`Cart quantity: ${cartQuantity}`);
+    ">Remove From Cart</button>
+    <button onclick="
+    cartQuantity -=2;
+    
+    console.log(`Cart quantity: ${cartQuantity}`);
+    ">Remove From Cart 2 </button>
+
+
     <script>
       let cartQuantity = 0;
     </script>
