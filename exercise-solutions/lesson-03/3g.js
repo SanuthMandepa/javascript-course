@@ -1,2 +1,2 @@
 //Strings
-console.log(`Total cost:$${(599+295)/100}`);
+console.log('Total cost:$'+(599+295)/100);
