@@ -15,6 +15,28 @@
       }
     }
     greet('sanuth');
+
+    function convertToFahrenheit(celsius){
+      Fahrenheit = (celsius *9/5) +32;
+      return Fahrenheit;
+    }
+    console.log(convertToFahrenheit(25));
+
+    function convertToCelsius(Fahrenheit){
+      celsius = (Fahrenheit -32) * 5/9;
+      return celsius;
+    }
+    console.log(convertToCelsius(86));
+
+    function convertTemperature(degree, unit){
+      if(unit==='c'){
+        return convertToFahrenheit(degree);
+      }
+      else if(unit ==='f'){
+        return convertToCelsius(degree);
+      }
+    }
+    console.log(convertTemperature(86,'f'));
   </script>
 </body>
 </html>
