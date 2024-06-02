@@ -8,6 +8,12 @@
 <body>
   <script>
     function convertLength(length, from, to){
+      if( from !=='km' && from !=='miles' && from !=='ft'){
+        return `invalid unit: ${from}`;
+      }
+      else if( to !=='km' && to !=='miles' && to !=='ft'){
+        return `invalid unit: ${to}`;
+      }
       if(from ==='miles' && to ==='km'){
         answer = length *1.6;
         return `${answer} km`;
