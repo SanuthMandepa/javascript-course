@@ -17,8 +17,12 @@
       name: 'volleyball',
       price: 3995
     }
+    const product3 = {
+      name: 'basketball',
+      price: 2095
+    };
     console.log(product1)
-    product1.price +=500;
+    
     console.log(product1.price)
     function comparePrice(product1, product2){
       if(product1.price > product2.price){
@@ -28,6 +32,19 @@
       }
     }
     comparePrice(product1,product2);
+
+    function isSameProduct(product1, product2){
+      if(product1.name === product2.name &&
+      product1.price === product2.price){
+        return true;
+      }else{
+        return false;
+      }
+    }
+    console.log(isSameProduct(product1, product3));
+    console.log(product1.name.toUpperCase())
+    console.log(product1.name.repeat(3))
+
   </script>
 </body>
 </html>
