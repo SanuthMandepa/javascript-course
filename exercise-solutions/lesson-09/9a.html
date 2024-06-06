@@ -12,15 +12,35 @@
   <button onclick="
   document.querySelector('.js-choice').innerHTML = 'You choose; heads';
   ">heads</button>
+
   <button onclick="
   document.querySelector('.js-choice').innerHTML = 'You choose; tails';
-
   " class="coin-button">tails</button>
   <p class="js-choice"></p>
+
+  <br>
+
+  <input placeholder="Name" 
+    onkeydown="
+    if(event.key === 'Enter'){
+      inputName();
+    }
+    " >
+  <button onclick="
+  inputName();
+  ">Submit</button>
+  <p class="name-input"></p>
+
+
   <script>
     console.log(document.querySelector('button'));
     console.log(document.querySelector('.b-button').innerHTML = '9b done!');
     
+    function inputName(){
+      const innerElement = document.querySelector('input');
+  document.querySelector('.name-input').innerHTML = `Your name is: ${innerElement.value}`;
+    }
+  
     
 
   </script>
