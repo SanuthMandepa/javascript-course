@@ -8,9 +8,20 @@
 <body>
   <button>9a</button>
   <button class="b-button">9b</button>
+
+  <button onclick="
+  document.querySelector('.js-choice').innerHTML = 'You choose; heads';
+  ">heads</button>
+  <button onclick="
+  document.querySelector('.js-choice').innerHTML = 'You choose; tails';
+
+  " class="coin-button">tails</button>
+  <p class="js-choice"></p>
   <script>
     console.log(document.querySelector('button'));
     console.log(document.querySelector('.b-button').innerHTML = '9b done!');
+    
+    
 
   </script>
 </body>
