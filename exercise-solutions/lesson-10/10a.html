@@ -32,6 +32,20 @@
       cursor: pointer;
       margin-bottom: 50px;
     }
+
+    .toggle-button{
+      background-color: rgb(230, 230, 230);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-size: 15px;
+        cursor: pointer; 
+    }
+    .is-toggled {
+      background-color: black;
+      color: white;
+    }
   </style>
   <button class="amazon-button">
     Add to Cart
@@ -42,14 +56,51 @@
   <button class="schedule-button">
     Schedule Later
   </button>
-  <br>
+  
   
   <button class="js-button">
     Test
   </button>
+
+  <br>
+  <button class="toggle-button gaming-button" onclick="
+  const button = document.querySelector('.gaming-button');
+  if(!button.classList.contains('is-toggled')){
+    button.classList.add('is-toggled')
+  }
+    else{
+    button.classList.remove('is-toggled')
+    }
+  ">
+    Gaming
+  </button>
+  <button class="toggle-button gaming-button2" onclick="
+  const button = document.querySelector('.gaming-button2');
+  if(!button.classList.contains('is-toggled')){
+    button.classList.add('is-toggled')
+  }
+    else{
+    button.classList.remove('is-toggled')
+    }
+  ">
+    Music
+  </button>
+  <button class="toggle-button gaming-button3" onclick="
+  const button = document.querySelector('.gaming-button3');
+  if(!button.classList.contains('is-toggled')){
+    button.classList.add('is-toggled')
+  }
+    else{
+    button.classList.remove('is-toggled')
+    }
+  ">
+    tech
+  </button>
+
   <script>
     const checkButton = document.querySelector('.js-button')
     console.log(checkButton.classList.contains('js-button'))
   </script>
+  
 </body>
 </html>
