@@ -64,42 +64,42 @@
 
   <br>
   <button class="toggle-button gaming-button" onclick="
-  const button = document.querySelector('.gaming-button');
-  if(!button.classList.contains('is-toggled')){
-    button.classList.add('is-toggled')
-  }
-    else{
-    button.classList.remove('is-toggled')
-    }
-  ">
-    Gaming
-  </button>
-  <button class="toggle-button gaming-button2" onclick="
-  const button = document.querySelector('.gaming-button2');
-  if(!button.classList.contains('is-toggled')){
-    button.classList.add('is-toggled')
-  }
-    else{
-    button.classList.remove('is-toggled')
-    }
-  ">
-    Music
-  </button>
-  <button class="toggle-button gaming-button3" onclick="
-  const button = document.querySelector('.gaming-button3');
-  if(!button.classList.contains('is-toggled')){
-    button.classList.add('is-toggled')
-  }
-    else{
-    button.classList.remove('is-toggled')
-    }
-  ">
-    tech
-  </button>
+      toggleButton('.gaming-button');
+    ">Gaming</button>
+
+    <button class="toggle-button gaming-button2" onclick="
+      toggleButton('.gaming-button2');
+    ">Music</button>
+
+    <button class="toggle-button gaming-button3" onclick="
+      toggleButton('.gaming-button3');
+    ">Tech</button>
 
   <script>
     const checkButton = document.querySelector('.js-button')
     console.log(checkButton.classList.contains('js-button'))
+
+    // The word "toggle" means turn on/off.
+function toggleButton(selector) {
+  const button = document.querySelector(selector);
+  if (!button.classList.contains('is-toggled')) {
+
+    // Before turning this button ON, check if there's
+    // already a button that's turned ON and turn it OFF.
+    turnOffPreviousButton();
+
+    button.classList.add('is-toggled');
+  } else {
+    button.classList.remove('is-toggled');
+  }
+}
+
+function turnOffPreviousButton() {
+  const previousButton = document.querySelector('.is-toggled');
+  if (previousButton) {
+    previousButton.classList.remove('is-toggled');
+  }
+}
   </script>
   
 </body>
