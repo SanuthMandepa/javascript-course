@@ -30,6 +30,7 @@
       padding: 5px 30px;
       border-radius: 5px;
       cursor: pointer;
+      margin-bottom: 50px;
     }
   </style>
   <button class="amazon-button">
@@ -41,5 +42,14 @@
   <button class="schedule-button">
     Schedule Later
   </button>
+  <br>
+  
+  <button class="js-button">
+    Test
+  </button>
+  <script>
+    const checkButton = document.querySelector('.js-button')
+    console.log(checkButton.classList.contains('js-button'))
+  </script>
 </body>
 </html>
