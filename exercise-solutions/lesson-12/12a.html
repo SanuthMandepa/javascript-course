@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="js-button" onclick="
+  updateButton();
+  ">
+    Start
+  </button>
+
+  <script>
+    let add  = function(){
+      console.log(2+3);
+    }
+    add()
+    function runTwice(fun){
+      fun();
+      fun();
+    }
+    runTwice(function(){
+      console.log('12b')
+    })
+    runTwice(add)
+
+    function updateButton(){
+      const button= document.querySelector('.js-button');
+      button.innerHTML = 'Loading...';
+      setTimeout(function(){
+        button.innerHTML = 'Finished!';
+        
+      },1000)
+    }
+  </script>
+</body>
+</html>
