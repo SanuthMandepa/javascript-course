@@ -30,9 +30,24 @@ score ={
 }
 };*/
 
+let isAutoPlaying = false;
+
+let intervalId;
+function autoPlay(){
+  if(!isAutoPlaying){
+  intervalId = setInterval(function(){
+    const playerMove = pickComputerMove();
+    playGame(playerMove);
+  }, 1000);
+  isAutoPlaying = true;
+  }else{
+    clearInterval(intervalId);
+    isAutoPlaying = false;
+  }
+}
 
 function playGame(playerMove){
-pickComputerMove();
+const computerMove = pickComputerMove();
 let result ='';
 if (playerMove ==='scissors'){
   if (computerMove ==='scissors'){
@@ -82,8 +97,7 @@ document.querySelector('.js-moves').innerHTML = `You
 <img src="./${computerMove}-emoji.png" class="move-icon">
 computer`;
 
-alert(`You picked ${playerMove}, Computer picked ${computerMove}. There its a ${result}
-Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`)
+
   }
   function updateScoreElement(){
     document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
