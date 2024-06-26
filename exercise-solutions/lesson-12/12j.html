@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<script>>, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const multiply = (a, b) =>a*b;
+    console.log(multiply(2, 3));
+
+    function countPositive(nums){
+      let positiveNumbers = 0;
+      nums.forEach((num)=>{
+        if(num>0){
+          positiveNumbers++;
+        }
+      })
+      return positiveNumbers;
+    }
+    console.log(countPositive([1, -3, 5]));
+      console.log(countPositive([-2, 3, -5, 7, 10]));
+
+    function addNum(array, num){
+      return array.map((value)=> value+num)
+    }
+    console.log(addNum([1, 2, 3], 2));
+      console.log(addNum([-2, -1, 0, 99], 2));
+  </script>
+</body>
+</html>
