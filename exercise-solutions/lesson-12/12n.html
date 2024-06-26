@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <body>
+    <button class="js-button">
+      Start
+    </button>
+  <script>
+    function removeEgg(foods){
+      let eggRemoved = 0;
+      return foods.filter((food)=>{
+        if(food ==='egg' && eggRemoved < 2){
+          eggRemoved++;
+          return false;
+        }
+        return true;
+      });
+    }
+    console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']))
+
+    
+    document.querySelector('.js-button').addEventListener('click',()=>{
+      const button = document.querySelector('.js-button');
+
+      setTimeout(()=>{
+        button.innerHTML = 'Finished!';
+      },2000)
+    })
+    
+  </script>
+</body>
+</html>
